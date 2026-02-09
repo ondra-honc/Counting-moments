@@ -79,6 +79,11 @@ body {
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
+
+.two {
+    background-image: url(./images/novelBackground.jpg);
+}
+
 .one h1 {
     position: absolute;
     top:15%;
@@ -104,5 +109,38 @@ body {
     left:50%;
     color: #ebe1ab;
     transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+}
+
+.two button {
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-decoration: none;
+    color: #F4F4F4;
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+    font-size: 100px;
+    padding: 0 25px;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #3c5558;
+    border-color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.two button:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: 0.05s ease-in-out;
+}
+
+.two h1 {
+    position: absolute;
+    top:20%;
+    left:20%;
+    color: #F4F4F4;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
     font-family: 'Playfair Display', serif;
 }
