@@ -66,3 +66,43 @@ body {
     display: inline-block; 
 
 }
+
+.content-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.one {
+    background-image: url(./images/landscape.jpg); 
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+.one h1 {
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
+}
+.one h3 {
+    position: absolute;
+    top:33%;
+    left:62%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.one small {
+    position: absolute;
+    top:11%;
+    left:50%;
+    color: #ebe1ab;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+}
