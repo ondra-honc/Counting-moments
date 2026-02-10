@@ -8,6 +8,18 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 20px; 
+}
+
+li {
+  margin-left: 15px;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -112,28 +124,6 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-.two button {
-    position: absolute;
-    top:50%;
-    left:50%;
-    text-decoration: none;
-    color: #F4F4F4;
-    border-radius: 20px;
-    height: 200px;
-    width: 400px;
-    font-size: 100px;
-    padding: 0 25px;
-    transform: translate(-50%, -50%) scale(1);
-    background-color: #3c5558;
-    border-color: white;
-    font-family: 'Playfair Display', serif;
-}
-
-.two button:active {
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: 0.05s ease-in-out;
-}
-
 .two h1 {
     position: absolute;
     top:20%;
@@ -143,4 +133,105 @@ body {
     transform: translate(-50%, -50%);
     font-size: 100px;
     font-family: 'Playfair Display', serif;
+}
+
+#password-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff; 
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.4s;
+}
+
+#password-input:focus {
+    border-bottom: 2px solid #A2C4C9;
+}
+
+#password-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+.hobbies-container {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+.panel {
+    flex: 1;
+    transition: all 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+    overflow: hidden;
+    position: relative;
+    filter: grayscale(80%); 
+    padding: 70px;
+}
+
+.panel h3, .panel p {
+    margin: 20px;
+}
+
+.panel:hover {
+    flex: 5;
+    filter: grayscale(0%);
+}
+
+.coding {
+    background-image: url(./images/codingBackground.webp);
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.coding h3, .coding p {
+    color: white;
+}
+
+.drifting {
+    background-image: url(./images/driftBackground.webp);
+}
+
+.k1 {
+    background-image: url(./images/k1Background.jpg);
+}
+
+.k1 h3, .k1 p {
+    color: white;
+}
+
+.class {
+    background-image: url(./images/classBackground.jpg);
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.footer {
+    height: 20vh;
+    width: 100%;
+    background-color: rgb(211, 144, 224);
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: #000000 20px;
+}
+
+.footer p {
+    margin-left: 30px;
+}
+
+.footer h2 {
+    margin-left: 10px;
+    padding: 10px;
 }
