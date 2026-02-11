@@ -92,6 +92,23 @@ li {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
+.one::after {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(
+    circle, 
+    rgba(0, 0, 0, 0) 60%, 
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  
+  pointer-events: none;
+}
+
 .two {
     background-image: url(./images/novelBackground.jpg);
 }
@@ -122,6 +139,19 @@ li {
     color: #ebe1ab;
     transform: translate(-50%, -50%);
     font-family: 'Playfair Display', serif;
+}
+
+.one p {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    opacity: 80%;
+}
+
+#subText {
+    bottom: 5%;
 }
 
 .two h1 {
@@ -190,14 +220,18 @@ li {
 }
 
 .coding {
-    background-image: url(./images/codingBackground.webp);
+    background-image: url(./images/codingBackground.jpg);
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat;
 }
 
-.coding h3, .coding p {
-    color: white;
+.coding p, .drifting p, .k1 p, .class p {
+    opacity: 50%;
+}
+
+.coding:hover p, .drifting:hover p, .k1:hover p, .class:hover p {
+    opacity: 100%;
 }
 
 .drifting {
@@ -206,10 +240,14 @@ li {
 
 .k1 {
     background-image: url(./images/k1Background.jpg);
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
-.k1 h3, .k1 p {
-    color: white;
+.k1 h3, .k1 p ,.coding h3, .coding p, .drifting h3, .drifting p, .class h3, .class p{
+    color: rgb(255, 255, 255);
+    font-size: x-large;
 }
 
 .class {
@@ -234,4 +272,14 @@ li {
 .footer h2 {
     margin-left: 10px;
     padding: 10px;
+}
+
+#line {
+    position: absolute;
+    left: 0;
+    bottom: 19%;
+    width: 100%;
+    height: 30px;
+    background-color: #af7ac5;
+    z-index: 9999;
 }
