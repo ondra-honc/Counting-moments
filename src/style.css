@@ -199,6 +199,28 @@ li {
     z-index: -1;
 }
 
+#aboutYou {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: #F4F4F4;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+#aboutYouSmall {
+    color: #F4F4F4;
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    color: #F4F4F4;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+}
+
 #password-input {
     position: absolute;
     top: 50%;
@@ -316,5 +338,46 @@ li {
     width: 100%;
     height: 30px;
     background-color: #af7ac5;
-    z-index: 9999;
+    z-index: 999;
+}
+
+.story-line {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+    color: white;
+    margin-bottom: 50vh;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+#revealButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#revealButton:active {
+    transform: translate(-50%,-50%) scale(0.8);
+}
+
+#revealButton:hover {
+    background: white;
+    color: black;
+}
+
+#the-final-line {
+    color: #F4F4F4;
+    font-weight: 700;
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
 }
