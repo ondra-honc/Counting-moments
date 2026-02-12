@@ -76,6 +76,7 @@ li {
     width: 50px;
     height: 50px; 
     display: inline-block; 
+
 }
 
 .content-section {
@@ -83,8 +84,6 @@ li {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-size: cover; /* Ensures landscape fills laptop screen */
-    background-position: center;
 }
 
 .one {
@@ -95,13 +94,19 @@ li {
 
 .one::after {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4) 100%);
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(
+    circle, 
+    rgba(0, 0, 0, 0) 60%, 
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  
+  pointer-events: none;
 }
 
 .two {
@@ -110,42 +115,37 @@ li {
 
 .one h1 {
     position: absolute;
-    top: 20%; /* Adjusted for better laptop visibility */
-    left: 50%;
+    top:15%;
+    left:50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(3rem, 8vw, 100px); /* Scales down on laptops */
+    font-size: 100px;
     font-family: 'Playfair Display', serif;
-    margin: 0;
 }
-
 .one h3 {
     position: absolute;
-    top: 38%; /* Kept proportional to h1 */
-    left: 50%; 
+    top:33%;
+    left:62%;
     transform: translate(-50%, -50%);
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-size: 1.1rem;
     opacity: 0.9;
-    width: 90%;
-    text-align: center;
 }
 
 .one small {
     position: absolute;
-    top: 12%; 
-    left: 50%;
+    top:11%;
+    left:50%;
     color: #ebe1ab;
     transform: translate(-50%, -50%);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .one p {
     position: absolute;
-    bottom: 12%;
+    bottom: 10%;
     left: 50%;
-    font-size: clamp(1rem, 1.5vw, 20px);
+    font-size: 20px;
     transform: translate(-50%, -50%);
     opacity: 80%;
 }
@@ -157,30 +157,76 @@ li {
 .two h1 {
     position: absolute;
     top: 20%;
-    left: 15%; /* Pulled in slightly for smaller screens */
+    left: 20%;
     color: #F4F4F4;
     font-weight: 700;
-    transform: translateY(-50%);
-    font-size: clamp(3rem, 7vw, 100px);
+    transform: translate(-50%, -50%);
+    font-size: 100px;
     font-family: 'Playfair Display', serif;
 }
 
 .two h2 {
     position: absolute;
-    bottom: 15%; /* Uses bottom instead of top to stay 'lower' */
-    right: 10%; /* Uses right instead of left to prevent overflow */
+    top: 70%;
+    left: 79%;
     color: #F4F4F4;
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 60px);
+    transform: translate(-50%, -50%);
+    font-size: 60px;
     font-family: 'Playfair Display', serif;
-    text-align: right;
+}
+
+.four {
+    position: relative;
+}
+
+.four::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-image: url(./images/landscape.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    filter: blur(5px) brightness(0.4); 
+
+    transform: scale(1.1);
+
+    z-index: -1;
+}
+
+#aboutYou {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: #F4F4F4;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+#aboutYouSmall {
+    color: #F4F4F4;
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    color: #F4F4F4;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    white-space: nowrap;
 }
 
 #password-input {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(2);
     background: transparent;
     border: none;
     border-bottom: 2px solid #fff; 
@@ -190,9 +236,20 @@ li {
     text-align: center;
     padding: 10px;
     outline: none;
-    width: min(300px, 80%); /* Ensures it doesn't break on narrow screens */
+    width: 250px;
     transition: border-color 0.4s;
 }
+
+#password-input:focus {
+    border-bottom: 2px solid #A2C4C9;
+}
+
+#password-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    font-style: italic;
+}
+
 
 .hobbies-container {
     display: flex;
@@ -207,28 +264,27 @@ li {
     overflow: hidden;
     position: relative;
     filter: grayscale(80%); 
-    padding: 20px; /* Reduced padding for laptop screens */
+    padding: 70px;
 }
 
 .panel h3, .panel p {
-    margin: 10px;
+    margin: 20px;
 }
 
 .panel:hover {
-    flex: 4; /* Slightly less than 5 for better laptop layout */
+    flex: 5;
     filter: grayscale(0%);
 }
 
 .coding {
     background-image: url(./images/codingBackground.jpg);
-    background-size: cover;     
+    background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat;
 }
 
 .coding p, .drifting p, .k1 p, .class p {
     opacity: 50%;
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem); /* Dynamic font size */
 }
 
 .coding:hover p, .drifting:hover p, .k1:hover p, .class:hover p {
@@ -237,24 +293,23 @@ li {
 
 .drifting {
     background-image: url(./images/driftBackground.webp);
-    background-size: cover;     
-    background-position: center;
 }
 
 .k1 {
     background-image: url(./images/k1Background.jpg);
-    background-size: cover;     
+    background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat;
 }
 
 .k1 h3, .k1 p ,.coding h3, .coding p, .drifting h3, .drifting p, .class h3, .class p{
     color: rgb(255, 255, 255);
+    font-size: x-large;
 }
 
 .class {
     background-image: url(./images/classBackground.jpg);
-    background-size: cover;     
+    background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat;
 }
@@ -266,29 +321,180 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #8a4ba1 0%, #af7ac5 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers content vertically on small screens */
 }
 
 .footer p {
     margin-left: 30px;
-    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .footer h2 {
     margin-left: 10px;
-    padding: 5px 10px;
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    padding: 10px;
 }
 
-/* This fixes the white line overlap */
 #line {
     position: absolute;
     left: 0;
-    bottom: 20%; 
+    bottom: 19%;
     width: 100%;
-    height: 2px; /* Thinner line looks more professional */
+    height: 30px;
     background-color: #af7ac5;
-    z-index: 9999;
+    z-index: 999;
+}
+
+.story-line {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+    color: white;
+    margin-bottom: 50vh;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+#revealButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#revealButton:active {
+    transform: translate(-50%,-50%) scale(0.8);
+}
+
+#revealButton:hover {
+    background: white;
+    color: black;
+}
+
+#the-final-line {
+    color: #F4F4F4;
+    font-weight: 700;
+    font-size: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+@media (min-width: 2000px) {
+    body {
+        font-size: 1.5rem; 
+    }
+    .one h1, .two h1, #aboutYou, #the-final-line {
+        font-size: 140px;
+    }
+    .panel h3 {
+        font-size: 3rem;
+    }
+    .panel p {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 1400px), (max-height: 800px) {
+
+    .one h1, .two h1, #aboutYou, #the-final-line {
+        font-size: clamp(3rem, 8vw, 70px); 
+    }
+    
+    .two h2 {
+        font-size: clamp(2rem, 5vw, 40px);
+        left: 50%; 
+        top: 85%; 
+        width: 90%;
+        text-align: center;
+    }
+
+    #aboutYouSmall {
+        left: 50%;
+        top: 30%;
+        width: 90%;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .one h3 {
+        top: 40%;
+        left: 50%;
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .one small {
+        top: 15%; 
+    }
+    
+    .one p {
+        width: 90%;
+        text-align: center;
+    }
+
+    .panel {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .navbar h1 {
+        font-size: 18px;
+    }
+    
+    .navItem {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+    
+    .hobbies-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .panel {
+        height: 30vh; 
+        width: 100%;
+        filter: grayscale(0%);
+    }
+    
+    .panel:hover {
+        flex: 1;
+    }
+
+    .story-line {
+        font-size: 1.2rem;
+        padding: 0 20px;
+        margin-bottom: 40vh;
+    }
+    
+    #the-final-line {
+        font-size: 50px;
+    }
+
+    #password-input {
+        width: 80%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media (max-height: 700px) {
+    .one h1, .two h1 {
+        top: 25%;
+    }
+    .footer {
+        height: auto;
+        padding-bottom: 20px;
+    }
 }
