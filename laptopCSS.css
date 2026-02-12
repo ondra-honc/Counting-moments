@@ -401,6 +401,10 @@ li {
 
 @media (max-width: 1400px), (max-height: 800px) {
 
+    li {
+        font-size: 12px;
+    }
+    
     .one h1, .two h1, #aboutYou, #the-final-line {
         font-size: clamp(3rem, 8vw, 70px); 
     }
