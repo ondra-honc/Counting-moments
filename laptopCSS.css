@@ -89,6 +89,9 @@ li {
 .one {
     background-image: url(./images/landscape.jpg); 
     color: #ffffff;
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
