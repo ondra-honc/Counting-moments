@@ -418,12 +418,12 @@ li {
     
     .two h2 {
         font-size: clamp(2rem, 5vw, 40px);
-        left: 50%; 
-        top: 85%; 
+        left: 80%; 
+        top: 80%; 
         width: 90%;
         text-align: center;
     }
-
+    
     #aboutYouSmall {
         left: 50%;
         top: 30%;
