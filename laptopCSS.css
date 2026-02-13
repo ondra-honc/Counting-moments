@@ -406,7 +406,7 @@ li {
 }
 
 
-@media (max-width: 1400px), (max-height: 800px) {
+@media (max-width: 1536px), (max-height: 864px) {
 
     li {
         font-size: 12px;
@@ -433,15 +433,14 @@ li {
     }
 
     .one h3 {
-        top: 50%;
-        left: 50%;
+        top: 30%;
+        left: 100%;
         width: 90%;
-        text-align: center;
         font-size: 1rem;
     }
     
     .one small {
-        top: 45%; 
+        top: 11%; 
     }
     
     .one p {
