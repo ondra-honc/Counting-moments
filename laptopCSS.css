@@ -453,6 +453,52 @@ li {
     }
 }
 
+@media (max-width: 1280px), (max-height: 720px) {
+    li {
+        font-size: 12px;
+    }
+    
+    .one h1, .two h1, #aboutYou, #the-final-line {
+        font-size: clamp(3rem, 8vw, 70px); 
+    }
+    
+    .two h2 {
+        font-size: clamp(2rem, 5vw, 40px);
+        left: 80%; 
+        top: 80%; 
+        width: 90%;
+        text-align: center;
+    }
+
+    #aboutYouSmall {
+        left: 50%;
+        top: 30%;
+        width: 90%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .one h3 {
+        top: 42%;
+        left: 100%;
+        width: 90%;
+        font-size: 1rem;
+    }
+    
+    .one small {
+        top: 15%; 
+    }
+    
+    .one p {
+        width: 90%;
+        text-align: center;
+    }
+
+    .panel {
+        padding: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         justify-content: space-between;
